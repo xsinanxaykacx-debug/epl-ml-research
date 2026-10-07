@@ -1,8 +1,38 @@
-# Source archive
+# \# Kaynak Kod (src/)
 
-The exact historical V7, V10, V11-A and V11-C implementation files are not available in the current GitHub workspace.
+# 
 
-They are therefore not reconstructed from memory and presented as original code. That would undermine reproducibility and could introduce unverified implementation details.
+# \## Yapı
 
-The verified protocol and results are archived in docs/.
-Original source files can be added later when available.
+# 
+
+# \- `data\_loader.py` — Veri yükleme fonksiyonları
+
+# \- `features.py` — Feature engineering
+
+# \- `models/` — Model eğitimi (V7)
+
+# \- `analysis/` — Edge analizi
+
+# 
+
+# \## Kullanım
+
+# 
+
+# ```python
+
+# from src.data\_loader import load\_merged, load\_v7\_predictions
+
+# from src.features import form\_hesapla, fark\_ozellikleri, market\_olasilik
+
+# 
+
+# df = load\_merged()
+
+# df = form\_hesapla(df, pencere=5)
+
+# df = fark\_ozellikleri(df)
+
+# df = market\_olasilik(df)
+

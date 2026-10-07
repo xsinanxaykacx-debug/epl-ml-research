@@ -1,22 +1,64 @@
-# Data
+# \# Veri
 
-Raw and processed datasets are intentionally excluded from Git.
+# 
 
-## Sources
+# \## Ham Veri (data/raw/)
 
-- Understat EPL match data: 2015-08-08 through 2024-05-19; 3,420 matches.
-- Football-Data EPL data: 2022/23, 2023/24 and 2024/25 were available.
-- The locked model comparison used 2022/23 and 2023/24.
-- Opening B365 1X2 odds were converted to fair probabilities by inverse odds followed by normalization.
+# 
 
-## Locked coverage
+# \### Understat (`understat\_match\_1524.csv`)
 
-The merged V10 comparison contained 760 raw matches across 2022/23 and 2023/24. V7-scored coverage was 379 matches in each season.
+# \- Kaynak: understat.com
 
-Two matches were absent from the V7 prediction output:
-- 2022-08-06 Newcastle United vs Nottingham Forest
-- 2023-08-12 Brighton vs Luton
+# \- İçerik: EPL 2015-2024 maçları, xG dahil
 
-The archive records the observation without speculating on the cause.
+# \- Boyut: \~3420 maç
 
-Raw and processed data should remain local unless redistribution rights are clear.
+# \- Sütunlar: id, fid, date, season, team\_h, team\_a, h\_goals, a\_goals, h\_xg, a\_xg, h\_shot, a\_shot, h\_shotOnTarget, a\_shotOnTarget, h\_deep, a\_deep, h\_ppda, a\_ppda
+
+# 
+
+# \### Football-Data (`buyuk\_veri.csv`, `epl\_2022\_2025.csv`)
+
+# \- Kaynak: football-data.co.uk
+
+# \- İçerik: EPL + diğer ligler, oranlar
+
+# \- Sütunlar: Date, HomeTeam, AwayTeam, FTHG, FTAG, FTR, B365H, B365D, B365A
+
+# 
+
+# \## İşlenmiş Veri (data/processed/)
+
+# 
+
+# \### `epl\_v10\_merged.csv`
+
+# \- Boyut: 760 maç
+
+# \- Dönem: 2022-2024
+
+# \- Kaynak: Understat + Football-Data
+
+# \- İçerik: xG + oranlar + sonuçlar
+
+# 
+
+# \### `v11a\_final\_predictions.csv`
+
+# \- Boyut: 379 maç (2023/24)
+
+# \- İçerik: V7, Market, V11-A, V11-C olasılıkları
+
+# 
+
+# \## Erişim
+
+# 
+
+# ```python
+
+# import pandas as pd
+
+# df = pd.read\_csv('data/processed/epl\_v10\_merged.csv')
+

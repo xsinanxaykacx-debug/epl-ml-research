@@ -1,5 +1,20 @@
-# Notebooks
+# \# Notebook'lar
 
-The original Jupyter notebooks are not reconstructed from memory.
+# 
 
-The archive prioritizes verified results and methodology over synthetic notebooks that might appear reproducible while silently using different implementation details.
+# \## 01 — Data Exploration
+
+# Ham veriyi inceler: xG dağılımı, sonuç dağılımı, marj.
+
+# 
+
+# \## 02 — V7 Walk-Forward
+
+# V7 modelinin walk-forward performansı: accuracy, rolling accuracy, confusion matrix.
+
+# 
+
+# \## 03 — Edge Analysis
+
+# V7 vs Market: Nerede edge var? ΔLL analizi.
+
